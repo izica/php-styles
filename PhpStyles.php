@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Class PhpStylesInline
+ * Class PhpStyles
  */
 class PhpStyles
 {
@@ -85,26 +85,5 @@ class PhpStyles
     public function opacity($value, $condition)
     {
         return $this->set('opacity', $value, $condition);
-    }
-}
-
-/**
- * Class PhpStyles
- */
-class PhpStylesInline extends PhpStyles
-{
-    public function render($condition = true)
-    {
-        if (!$condition) {
-            return '';
-        }
-
-        $css = '';
-        $array = [];
-        foreach ($this->styles as $key => $value) {
-            $array[$key] = $key . ': ' . $value;
-        }
-        $css = implode(';', $array);
-        return "style='{$css}'";
     }
 }

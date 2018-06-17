@@ -2,7 +2,7 @@
 require_once('PhpStyles.php');
 
 /**
- * Class PhpStyles
+ * Class PhpStylesInline
  */
 class PhpStylesInline extends PhpStyles
 {
