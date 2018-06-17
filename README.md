@@ -37,7 +37,7 @@ insert style
 * styles() - returns PhpStyles
 * styles(true) - returns PhpStylesInline
 * PhpStyles
-    * inline() - returns PhpStyles
+    * inline() - returns PhpStylesInline
     * media(sizeFrom: number, sizeTo: number)
     * set(key: string, value: string or number, condition: bool(not required)) - returns $this(if condition == false, not set)
     * render(condition: bool(not required))- returns unique class name(if condition == false, returns empty string)
