@@ -24,6 +24,14 @@ generate style with class(class styles supports media query)
     $sClassname = (new PhpStyles())->media(0, 1024)->opacity(0, $sContact == '')->render();
     or
     $sClassname = styles()->media(0, 1024)->opacity(0, $sContact == '')->render();
+    or
+    $sClassname = styles()
+        ->media(0, 1024)
+        ->set('display', 'flex'),
+        ->set('align-items', 'center'),
+        ->set('color', '#ccc')
+        ->opacity(0, $sContact == '')
+        ->render();
 ```
 
 insert style
