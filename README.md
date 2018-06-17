@@ -28,7 +28,8 @@ generate style with class(class styles supports media query)
     $sClassname = styles()
         ->media(0, 1024)
         ->set('display', 'flex'),
-        ->set('align-items', 'center'),
+        ->set('align-items', 'center', $itemsCount > 4),
+        ->set('align-items', 'flex-start', $itemsCount <= 4),
         ->set('color', '#ccc')
         ->opacity(0, $sContact == '')
         ->render();
