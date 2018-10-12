@@ -99,7 +99,7 @@ class PhpStyles
     public function name($value)
     {
         if(is_string($value)){
-            $this->classname = $value
+            $this->classname = $value;
         }
         return $this;
     }
