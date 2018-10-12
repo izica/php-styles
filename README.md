@@ -26,6 +26,7 @@ generate style with class(class styles supports media query)
     $sClassname = styles()->media(0, 1024)->opacity(0, $sContact == '')->render();
     or
     $sClassname = styles()
+        ->name('contact-images')
         ->media(0, 1024)
         ->set('display', 'flex'),
         ->set('align-items', 'center', $itemsCount > 4),
@@ -51,6 +52,7 @@ insert style
     * set(key: string, value: string or number, condition: bool(not required)) - returns $this(if condition == false, not set)
     * render(condition: bool(not required))- returns unique class name(if condition == false, returns empty string)
     * opacity(value, condition(not required))
+    * name(className: string)
 * PhpStylesInline
     * set(key: string, value: string or number, condition: bool(not required)) - returns $this(if condition == false, not set)
     * render(condition: bool(not required))- returns unique class name(if condition == false, returns empty string)

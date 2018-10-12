@@ -9,7 +9,7 @@ class PhpStyles
      * @var string
      */
     public $styles = [];
-    private $classname = '';
+    private $classname = null;
     private $media = false;
     private $mediaFrom = '';
     private $mediaTo = '';
@@ -30,7 +30,9 @@ class PhpStyles
         if (!$condition) {
             return '';
         }
-        $this->classname = uniqid('php-styles-');
+        if(!is_string($this->classname)){
+            $this->classname = uniqid('php-styles-');
+        }
 
         $array = [];
         foreach ($this->styles as $key => $value) {
@@ -49,7 +51,10 @@ class PhpStyles
         }
         echo "</style>";
 
-        return $this->classname;
+        $classname = $this->classname;
+        $this->classname = null;
+
+        return $classname;
     }
 
     /**
@@ -83,6 +88,16 @@ class PhpStyles
      * @return $this
      */
     public function opacity($value, $condition)
+    {
+        return $this->set('opacity', $value, $condition);
+    }
+
+    /**
+     * @param $value
+     * @param $condition
+     * @return $this
+     */
+    public function name($value)
     {
         return $this->set('opacity', $value, $condition);
     }
