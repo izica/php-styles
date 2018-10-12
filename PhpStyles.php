@@ -94,11 +94,13 @@ class PhpStyles
 
     /**
      * @param $value
-     * @param $condition
      * @return $this
      */
     public function name($value)
     {
-        return $this->set('opacity', $value, $condition);
+        if(is_string($value)){
+            $this->classname = $value
+        }
+        return $this;
     }
 }
