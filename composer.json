@@ -1,12 +1,6 @@
 {
     "name": "izica/php-styles",
     "description": "inline css styles generator(conditions support)",
-    "authors": [
-        {
-            "name": "Golovarchuk Artyom",
-            "email": "artemiztomska@gmail.com"
-        }
-    ],
     "keywords": ["css", "php", "css-inline", "generator", "styles"],
     "license": "MIT",
     "require": {
